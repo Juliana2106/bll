@@ -5,6 +5,12 @@
 			"referenceName": "DataLake_LS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"pr_Fecha_Proceso": {
+				"type": "string",
+				"defaultValue": "1800-01-01"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
