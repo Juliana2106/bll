@@ -1,0 +1,15 @@
+{
+	"name": "datafactorybll1",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7f45db77-9075-4a70-881e-ad3b7c493a7e",
+		"tenantId": "6e11ea0d-6e07-4976-a897-129dfc67dace"
+	}
+}
