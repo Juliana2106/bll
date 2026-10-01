@@ -5,7 +5,14 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Obtener Parametros",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.00:10:00",
 					"retry": 0,
@@ -17,15 +24,49 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"queryTimeout": "02:00:00",
+						"sqlReaderQuery": {
+							"value": "@concat(\n'SELECT ot.order_id, ot.item_id, ot.product_id, ot.quantity, ot.list_price, ot.discount, o.order_date\nFROM BikeStores.sales.order_items ot\nINNER JOIN BikeStores.sales.orders o ON o.order_id = ot.order_id\nWHERE YEAR(o.order_date) = ''',\nsubstring(activity('Obtener Parametros').output.firstRow.FechaProceso, 0, 4),\n''' AND MONTH(o.order_date) = ''',\nsubstring(activity('Obtener Parametros').output.firstRow.FechaProceso, 5, 2),\n''''\n)",
+							"type": "Expression"
+						},
+						"isolationLevel": "ReadCommitted",
 						"partitionOption": "None"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 4,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "Table_Order_Items",
 						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Parquet_Order_Items",
+						"type": "DatasetReference",
+						"parameters": {
+							"pr_Fecha_Proceso": {
+								"value": "@activity('Obtener Parametros').output.firstRow.FechaProceso",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
