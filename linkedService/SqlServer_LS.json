@@ -5,7 +5,7 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"server": "msql.luispicado.com",
+			"server": "msql.luispicado.com,51430",
 			"database": "Bikestores",
 			"encrypt": "optional",
 			"trustServerCertificate": true,
