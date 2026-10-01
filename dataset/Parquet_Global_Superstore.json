@@ -1,0 +1,20 @@
+{
+	"name": "Parquet_Global_Superstore",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLake_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Bronze/BLL1/Global_Superstore",
+				"fileSystem": "datalake"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
