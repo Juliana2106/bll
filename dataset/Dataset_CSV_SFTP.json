@@ -1,0 +1,23 @@
+{
+	"name": "Dataset_CSV_SFTP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sftp_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "SftpLocation",
+				"fileName": "Global_Superstore2.csv",
+				"folderPath": "/Nivel_1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
