@@ -1,0 +1,30 @@
+{
+	"name": "Table_Parameters",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Codigo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Clave",
+				"type": "varchar"
+			},
+			{
+				"name": "Valor",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Parametros"
+		}
+	}
+}
