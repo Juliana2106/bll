@@ -16,7 +16,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Bronze",
+				"fileName": {
+					"value": "@concat('Order_Items',replace(dataset().pr_Fecha_Proceso,'-',''),'.parquet')",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('Bronze/BLL1/BikeStore/Order_Items',\r\nsubstring(dataset().pr_Fecha_Proceso,0,4))",
+					"type": "Expression"
+				},
 				"fileSystem": "datalake"
 			},
 			"compressionCodec": "snappy"
