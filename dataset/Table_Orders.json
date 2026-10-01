@@ -1,0 +1,56 @@
+{
+	"name": "Table_Orders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "order_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "customer_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "order_status",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "order_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "required_date",
+				"type": "date"
+			},
+			{
+				"name": "shipped_date",
+				"type": "date"
+			},
+			{
+				"name": "store_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "staff_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "sales",
+			"table": "orders"
+		}
+	}
+}
