@@ -19,17 +19,16 @@
 						"type": "RestSource",
 						"httpRequestTimeout": "00:01:40",
 						"requestInterval": "00.00:00:00.010",
-						"requestMethod": "GET",
-						"paginationRules": {
-							"supportRFC5988": "true"
-						}
+						"requestMethod": "GET"
 					},
 					"sink": {
-						"type": "RestSink",
-						"httpRequestTimeout": "00:05:00",
-						"requestInterval": 10,
-						"writeBatchSize": 10000,
-						"httpCompressionType": "none"
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
 					},
 					"enableStaging": false
 				},
@@ -41,7 +40,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Dataset_Rest",
+						"referenceName": "Json_API",
 						"type": "DatasetReference"
 					}
 				]
