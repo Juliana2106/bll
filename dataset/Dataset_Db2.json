@@ -1,0 +1,16 @@
+{
+	"name": "Dataset_Db2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Db2_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Db2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "CHINOOK",
+			"table": "INVOICE"
+		}
+	}
+}
