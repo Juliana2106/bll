@@ -1,0 +1,19 @@
+{
+	"name": "Json_API",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLake_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Bronze/BLL1/Biblioteca Abierta",
+				"fileSystem": "datalake"
+			}
+		},
+		"schema": {}
+	}
+}
