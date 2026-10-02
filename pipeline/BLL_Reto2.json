@@ -48,8 +48,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Row ID",
-									"type": "String",
+									"name": "Row_ID",
 									"physicalType": "UTF8"
 								}
 							},
@@ -60,8 +59,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Order ID",
-									"type": "String",
+									"name": "Order_ID",
 									"physicalType": "UTF8"
 								}
 							},
@@ -72,8 +70,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Order Date",
-									"type": "String",
+									"name": "Order_Date",
 									"physicalType": "UTF8"
 								}
 							},
@@ -84,8 +81,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Ship Date",
-									"type": "String",
+									"name": "Ship_Date",
 									"physicalType": "UTF8"
 								}
 							},
@@ -96,8 +92,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Ship Mode",
-									"type": "String",
+									"name": "Ship_Mode",
 									"physicalType": "UTF8"
 								}
 							},
@@ -108,8 +103,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Customer ID",
-									"type": "String",
+									"name": "Customer_ID",
 									"physicalType": "UTF8"
 								}
 							},
@@ -120,8 +114,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Customer Name",
-									"type": "String",
+									"name": "Customer_Name",
 									"physicalType": "UTF8"
 								}
 							},
@@ -180,8 +173,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Postal Code",
-									"type": "String",
+									"name": "Postal_Code",
 									"physicalType": "UTF8"
 								}
 							},
@@ -216,8 +208,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Product ID",
-									"type": "String",
+									"name": "Product_ID",
 									"physicalType": "UTF8"
 								}
 							},
@@ -251,8 +242,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Product Name",
-									"type": "String",
+									"name": "Product_Name",
 									"physicalType": "UTF8"
 								}
 							},
@@ -311,8 +301,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Shipping Cost",
-									"type": "String",
+									"name": "Shipping_Cost",
 									"physicalType": "UTF8"
 								}
 							},
@@ -323,8 +312,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Order Priority",
-									"type": "String",
+									"name": "Order_Priority",
 									"physicalType": "UTF8"
 								}
 							}
